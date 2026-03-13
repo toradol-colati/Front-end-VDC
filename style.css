@@ -1,0 +1,293 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .logo-image {
+    max-width: 250px; /* Imposta la larghezza massima del tuo logo */
+    height: auto; /* Mantiene le proporzioni corrette */
+  }
+
+  .site-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 3px;
+    margin: 20px 0;
+  }
+
+  .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  .properties-section {
+    background: white;
+    padding: 40px 0;
+  }
+
+  .property-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .property {
+    text-align: center;
+  }
+
+  .property-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .property-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.8em;
+    color: #4a9d5f;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .property-description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+  }
+
+  .location-info {
+    background: #f9f9f9;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 8px;
+    text-align: justify;
+    line-height: 1.7;
+  }
+
+  .map-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+    align-items: start;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .villa-details {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .villa-details p {
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.7;
+  }
+
+  .contact-section {
+    background: white;
+    padding: 40px 0;
+    /* text-align: center; RIMOSSO */
+  }
+
+  .contact-subtitle {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  .contact-info {
+    text-align: left;
+    max-width: 400px;
+    /* margin: 0 auto; RIMOSSO per allineare a sinistra */
+    margin-left: 0; /* Allinea il blocco a sinistra */
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+  }
+
+  .contact-label {
+    margin-right: 10px;
+    font-weight: bold;
+    min-width: 80px;
+  }
+
+  .contact-value {
+    color: #333;
+  }
+
+  .image-gallery {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  /* Stili per i nuovi bottoni del carosello */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    z-index: 10;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+  }
+
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .property-grid {
+      grid-template-columns: 1fr;
+    }
+    .map-section {
+      grid-template-columns: 1fr;
+    }
+    .site-title {
+      font-size: 2em;
+    }
+  }
+
+  #sticky-logo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  #sticky-logo:hover {
+    transform: scale(1.1);
+  }
+
+  #sticky-logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  /* Stile per il link dell'email */
+  .email-link {
+    display: inline-flex; /* Allinea email e freccia sulla stessa riga */
+    align-items: center;
+    text-decoration: none; /* Rimuove la fastidiosa sottolineatura */
+    color: inherit; /* Usa lo stesso colore del testo normale (#333) */
+    transition: opacity 0.2s; /* Aggiunge un effetto al passaggio del mouse */
+  }
+
+  .email-link:hover {
+    opacity: 0.7; /* Rende il link leggermente più chiaro quando ci passi sopra */
+  }
+
+  .email-link .arrow {
+    margin-left: 8px; /* Crea un po' di spazio tra l'email e la freccia */
+    font-weight: bold;
+  }
+
+  /* Stili per la barra dei servizi */
+  .services-bar {
+    display: flex; /* Mette gli elementi uno accanto all'altro */
+    justify-content: space-around; /* Li distribuisce con spazio uniforme */
+    align-items: center;
+    padding: 20px 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-top: 1px solid #eee; /* Linea di separazione sopra */
+    border-bottom: 1px solid #eee; /* Linea di separazione sotto */
+  }
+
+  .service-item {
+    display: flex;
+    flex-direction: column; /* Mette l'icona sopra al testo */
+    align-items: center;
+    font-size: 0.8em;
+    color: #555;
+    text-align: center;
+  }
+
+  .service-item i { /* Stile per l'icona (tag <i>) */
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    color: #4a9d5f; /* Verde, come i titoli delle proprietà */
+  }
+</style>
