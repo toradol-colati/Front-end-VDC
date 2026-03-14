@@ -257,86 +257,61 @@ header {
   }
 }
 
-/* --- SPLASH SCREEN LOADER --- */
+body.loading {
+    overflow: hidden;
+}
+
 #loader-wrapper {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fdfbf7; /* Crema luxury */
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #fdfbf7;
+    z-index: 10000;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-    transition: opacity 0.8s ease, visibility 0.8s;
+    transition: opacity 0.6s ease;
 }
 
 #animated-logo {
-    width: 300px; /* Regola la dimensione del logo nel loader */
+    width: 60%; /* Logo grande e leggibile */
+    max-width: 500px;
     height: auto;
 }
 
-/* 1. Animazione Titolo (Villa del Conte) */
-#anim-title {
+/* Sequenza animazioni */
+#anim-title-group, #anim-lines-group, #anim-trees-group, #anim-sun-group, #anim-sub-group {
     opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: 0.2s;
 }
 
-/* 2. Animazione Linee (Disegno da sinistra) */
-#anim-lines path {
-    stroke: #76a384;
-    stroke-width: 2;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    fill: transparent;
-    animation: drawLines 0.8s ease forwards;
-    animation-delay: 0.7s;
+#anim-title-group { animation: fadeIn 0.4s ease forwards 0.2s; }
+
+#anim-lines-group { 
+    animation: fadeIn 0.4s ease forwards 0.6s; 
+    transform-origin: center;
 }
 
-/* 3. Animazione Alberi */
-#anim-trees {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: slideUp 0.6s ease forwards;
-    animation-delay: 1.2s;
+#anim-trees-group { 
+    animation: slideIn 0.5s ease forwards 1s; 
 }
 
-/* 4. Animazione Sole (Sorge e salta) */
-#anim-sun {
-    opacity: 0;
-    transform: scale(0.5) translate(-50px, 50px);
-    animation: sunRise 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    animation-delay: 1.6s;
+#anim-sun-group { 
+    animation: sunPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 1.4s;
+    transform-origin: 917px 187px; /* Punto preciso del sole */
 }
 
-/* 5. Animazione Sottotitolo (Santa Domenica) */
-#anim-subtitle {
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: 2.1s;
-}
+#anim-sub-group { animation: fadeIn 0.4s ease forwards 2s; }
 
-/* KEYFRAMES */
-@keyframes fadeIn {
-    to { opacity: 1; }
-}
+@keyframes fadeIn { to { opacity: 1; } }
 
-@keyframes drawLines {
-    to { stroke-dashoffset: 0; fill: #76a384; }
-}
-
-@keyframes slideUp {
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes sunRise {
-    to { opacity: 1; transform: scale(1) translate(0, 0); }
+@keyframes sunPop {
+    from { opacity: 0; transform: scale(0) translateY(50px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* Nascondi loader quando finito */
-.loader-hidden {
-    opacity: 0;
-    visibility: hidden;
-}
+.loader-hidden { opacity: 0; pointer-events: none; }
