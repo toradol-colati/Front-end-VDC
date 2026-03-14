@@ -256,3 +256,87 @@ header {
     display: none; /* Nasconde il logo fluttuante su piccoli schermi per non coprire testo */
   }
 }
+
+/* --- SPLASH SCREEN LOADER --- */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fdfbf7; /* Crema luxury */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+#animated-logo {
+    width: 300px; /* Regola la dimensione del logo nel loader */
+    height: auto;
+}
+
+/* 1. Animazione Titolo (Villa del Conte) */
+#anim-title {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* 2. Animazione Linee (Disegno da sinistra) */
+#anim-lines path {
+    stroke: #76a384;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    fill: transparent;
+    animation: drawLines 0.8s ease forwards;
+    animation-delay: 0.7s;
+}
+
+/* 3. Animazione Alberi */
+#anim-trees {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideUp 0.6s ease forwards;
+    animation-delay: 1.2s;
+}
+
+/* 4. Animazione Sole (Sorge e salta) */
+#anim-sun {
+    opacity: 0;
+    transform: scale(0.5) translate(-50px, 50px);
+    animation: sunRise 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-delay: 1.6s;
+}
+
+/* 5. Animazione Sottotitolo (Santa Domenica) */
+#anim-subtitle {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 2.1s;
+}
+
+/* KEYFRAMES */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes drawLines {
+    to { stroke-dashoffset: 0; fill: #76a384; }
+}
+
+@keyframes slideUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sunRise {
+    to { opacity: 1; transform: scale(1) translate(0, 0); }
+}
+
+/* Nascondi loader quando finito */
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
