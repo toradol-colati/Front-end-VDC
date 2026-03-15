@@ -28,10 +28,13 @@ header {
 
 .logo-section {
   background-color: #ffffff;
-  padding: 40px;
+  padding: 20px 40px; /* Ridotto il padding verticale per snellire il rettangolo */
   border-radius: 8px;
-  display: inline-block;
+  display: block; /* Modificato da inline-block a block */
+  margin: 0 auto; /* Questo forza la centratura orizzontale matematica */
+  max-width: fit-content; /* Assicura che il rettangolo avvolga il logo senza espandersi a tutto schermo */
   box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 .logo-image {
