@@ -30,6 +30,7 @@ header {
 }
 
 .logo-image {
+  width: 100%;
   max-width: 650px;
   height: auto;
 }
@@ -254,6 +255,9 @@ header {
   }
   #sticky-logo {
     display: none; /* Nasconde il logo fluttuante su piccoli schermi per non coprire testo */
+  }
+  .logo-image {
+    max-width: 280px; 
   }
 }
 
