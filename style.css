@@ -27,14 +27,18 @@ header {
 }
 
 .logo-section {
-  text-align: center;
-  margin-bottom: 40px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 .logo-image {
   width: 100%;
   max-width: 650px;
   height: auto;
+  display: block;
 }
 
 .site-title {
