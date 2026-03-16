@@ -1,0 +1,16 @@
+-###-  BACK-END
+   • per le funzionalità di prenotazione e pagamento sul sito serve creare una infrastruttura back-end che funzioni tramite varie API,
+        per cui ho creato una repository privata apposita dove poi ci svilupperò il codice:
+           - PAGAMENTI: Stripe API per il gateway dei pagamenti (offre Apple Pay e quant'altro).
+           - CALENDARIO: Firebase + iCal per l'aggiornamento continuo del calendario delle disponibilità (le API delle OTA sono inaccessibili).
+
+-###- LINGUE
+   • NON si crea un html per ogni lingua, bensì si opta per uno di questi tre approcci;
+      - json + js : si crea un file json che contiene tutte le stringhe del sito ed implementi la funzione changeLanguage, 
+           mentre nel file html invece di scrivere i testi ti riferisci ad un determinato testo usando le data-key.
+      - url + sotto-directories : approccio migliore per la SEO.
+      - librerie o API : librerie come i18Next oppure widget come Google Translate API o Weglot 
+
+-###- BLOG
+   • alcuni siti la chiamano invece sezione "notebook"
+   • 
