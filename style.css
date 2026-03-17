@@ -387,7 +387,7 @@ main > .contact-section { animation-delay: 3.5s; }
 .main-nav .container {
   display: flex;
   justify-content: center;
-  gap: 150px;
+  gap: 300px;
 }
 
 .nav-btn {
