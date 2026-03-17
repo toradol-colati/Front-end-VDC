@@ -372,3 +372,63 @@ main > .contact-section { animation-delay: 3.5s; }
 }
 
 .loader-hidden { opacity: 0; pointer-events: none; }
+
+/* Stile Menù Orizzontale */
+.main-nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.main-nav .container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  color: #888;
+  cursor: pointer;
+  padding: 20px 10px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: #4a9d5f;
+}
+
+.nav-btn.active {
+  color: #4a9d5f;
+  font-weight: 600;
+  border-bottom: 3px solid #4a9d5f;
+}
+
+/* Gestione visibilità delle schede (SPA) */
+.content-section {
+  display: none;
+  padding-top: 40px;
+  animation: fadeInTab 0.4s ease forwards;
+}
+
+.content-section.active {
+  display: block;
+}
+
+@keyframes fadeInTab {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .main-nav .container { gap: 15px; }
+  .nav-btn { font-size: 0.95em; padding: 15px 5px; }
+}
