@@ -68,25 +68,46 @@ header {
 .property-list {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 120px; /* Distanza verticale ampia tra le due strutture */
   margin-bottom: 60px;
 }
 
-.property-row {
+.property-block {
+  width: 85%; /* Occupa solo una frazione dello schermo per permettere lo scostamento */
+}
+
+.left-block {
+  align-self: flex-start; /* Forza il blocco Villa a sinistra */
+}
+
+.right-block {
+  align-self: flex-end; /* Forza il blocco Conte House a destra */
+}
+
+.property-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5em;
+  color: #4a9d5f;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.property-content {
   display: flex;
-  align-items: center;
-  gap: 60px;
+  align-items: flex-start;
+  gap: 50px;
 }
 
-.property-row.reverse {
-  flex-direction: row-reverse;
+.property-content.reverse {
+  flex-direction: row-reverse; /* Inverte foto/testo per la Conte House */
 }
 
-.property-gallery, .property-text {
-  flex: 1;
+.property-gallery {
+  flex: 1.2; /* Dà leggermente più spazio all'immagine rispetto al testo */
 }
 
 .property-text {
+  flex: 1;
   text-align: left;
 }
 
@@ -283,6 +304,15 @@ header {
   }
   .property-row, .property-row.reverse {
     flex-direction: column;
+  }
+  .property-block {
+    width: 100%;
+  }
+  .property-content, .property-content.reverse {
+    flex-direction: column;
+  }
+  .property-title {
+    text-align: center !important;
   }
 }
 
