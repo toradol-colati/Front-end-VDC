@@ -312,15 +312,15 @@ body.loading {
 
 main > section, main > div.container {
   opacity: 0;
-  animation: microIntro 0.6s ease forwards;
+  animation: microIntro 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-main > .properties-section { animation-delay: 2.8s; }
-main > div.container { animation-delay: 3.0s; }
-main > .contact-section { animation-delay: 3.2s; }
+main > .properties-section { animation-delay: 3.1s; }
+main > div.container { animation-delay: 3.3s; }
+main > .contact-section { animation-delay: 3.5s; }
 
 @keyframes microIntro {
-  from { opacity: 0; transform: translateY(25px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
