@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -73,7 +73,7 @@ header {
 }
 
 .property-block {
-  width: 85%; /* Occupa solo una frazione dello schermo per permettere lo scostamento */
+  width: 65%; /* Occupa solo una frazione dello schermo per permettere lo scostamento */
 }
 
 .left-block {
@@ -387,7 +387,7 @@ main > .contact-section { animation-delay: 3.5s; }
 .main-nav .container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 150px;
 }
 
 .nav-btn {
