@@ -112,6 +112,53 @@
                 </div>
             </section>
 
+            <div class="container" style="margin-top: 80px;">
+                <div class="booking-form-container">
+                    <h3 class="property-title" style="text-align: center; font-size: 2.5em;">Richiesta di Prenotazione</h3>
+                    <p style="text-align: center; color: #555; margin-bottom: 30px;">Compila il modulo per richiedere disponibilità o informazioni. Ti risponderemo con la nostra migliore offerta.</p>
+                    
+                    <form action="https://formspree.io/f/mpqyonda" method="POST" class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nome e Cognome *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkin">Check-in</label>
+                                <input type="date" id="checkin" name="checkin">
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout">Check-out</label>
+                                <input type="date" id="checkout" name="checkout">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="structure">Struttura di interesse</label>
+                            <select id="structure" name="structure">
+                                <option value="La Villa">La Villa</option>
+                                <option value="La Conte House">La Conte House</option>
+                                <option value="Entrambe">Entrambe (Intera Proprietà)</option>
+                                <option value="Solo Informazioni">Solo Informazioni generiche</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Messaggio / Richieste speciali *</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Invia Richiesta</button>
+                    </form>
+                </div>
+            </div>
         
         </section>
 
