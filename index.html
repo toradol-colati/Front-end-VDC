@@ -48,61 +48,79 @@
          </div>
       </div>
     </header>
+<nav class="main-nav">
+        <div class="container">
+            <button class="nav-btn active" data-target="strutture">Le Strutture</button>
+            <button class="nav-btn" data-target="chi-siamo">Chi Siamo</button>
+            <button class="nav-btn" data-target="faq">FAQ</button>
+        </div>
+    </nav>
 
     <main>
-        <section class="properties-section">
+        <section id="strutture" class="content-section active">
+            <section class="properties-section">
+                <div class="container">
+                    <div class="property-list">
+                        <div class="property-block left-block">
+                            <h2 class="property-title">La Villa</h2>
+                            <div class="property-content">
+                                <div class="property-gallery">
+                                    <div class="image-gallery" id="gallery-villa">
+                                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="La Villa" class="property-image">
+                                        <button class="carousel-btn prev-btn"><</button>
+                                        <button class="carousel-btn next-btn">></button>
+                                    </div>
+                                </div>
+                                <div class="property-text">
+                                    <div class="services-bar" style="margin-top: 0; padding-top: 0; border-top: none;">
+                                        <div class="service-item"><i class="fa-solid fa-wifi"></i> <span>WiFi Gratuito</span></div>
+                                        <div class="service-item"><i class="fa-solid fa-wheelchair-move"></i> <span>Accesso Disabili</span></div>
+                                        <div class="service-item"><i class="fa-solid fa-square-parking"></i> <span>Parcheggio</span></div>
+                                    </div>
+                                    <p class="property-description">La Villa è la soluzione ideale per famiglie numerose o gruppi di amici che desiderano condividere una vacanza indimenticabile. Spaziosa e luminosa, offre ampi ambienti dove sentirsi a casa, a soli 500 metri dalla spiaggia. Dispone di tre camere da letto, un grande soggiorno, una cucina perfettamente attrezzata e due bagni, il tutto circondato da un meraviglioso giardino privato.</p>
+                                    <p class="property-description">Godetevi la comodità di un parcheggio interno, Wi-Fi gratuito e spazi pensati per il relax e il divertimento di tutti.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="property-block right-block">
+                            <h2 class="property-title" style="text-align: right;">La Conte House</h2>
+                            <div class="property-content reverse">
+                                <div class="property-gallery">
+                                    <div class="image-gallery" id="gallery-conte">
+                                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="La Conte House" class="property-image">
+                                        <button class="carousel-btn prev-btn"><</button>
+                                        <button class="carousel-btn next-btn">></button>
+                                    </div>
+                                </div>
+                                <div class="property-text">
+                                    <p class="property-description">Situata all'interno della stessa proprietà, ma con un ingresso separato che ne garantisce la massima privacy, la Conte House è un'accogliente e riservata dependance.</p>
+                                    <p class="property-description">Perfetta per coppie o piccole famiglie, questa suite indipendente è composta da una camera da letto con TV, un bagno privato e un soggiorno con una moderna cucina a vista, offrendo un rifugio intimo e confortevole.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <div class="container">
-                <div class="property-list">
-
-    <div class="property-block left-block">
-        <h2 class="property-title">La Villa</h2>
-        <div class="property-content">
-            <div class="property-gallery">
-                <div class="image-gallery" id="gallery-villa">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="La Villa" class="property-image">
-                    <button class="carousel-btn prev-btn"><</button>
-                    <button class="carousel-btn next-btn">></button>
-                </div>
-            </div>
-            <div class="property-text">
                 <div class="services-bar">
-                    <div class="service-item"><i class="fa-solid fa-wifi"></i> <span>WiFi Gratuito</span></div>
-                    <div class="service-item"><i class="fa-solid fa-wheelchair-move"></i> <span>Accesso Disabili</span></div>
-                    <div class="service-item"><i class="fa-solid fa-square-parking"></i> <span>Parcheggio</span></div>
-                </div>
-                <p class="property-description">La Villa è la soluzione ideale per famiglie numerose o gruppi di amici che desiderano condividere una vacanza indimenticabile. Spaziosa e luminosa, offre ampi ambienti dove sentirsi a casa, a soli 500 metri dalla spiaggia. Dispone di tre camere da letto, un grande soggiorno, una cucina perfettamente attrezzata e due bagni, il tutto circondato da un meraviglioso giardino privato.</p>
-                <p class="property-description">Godetevi la comodità di un parcheggio interno, Wi-Fi gratuito e spazi pensati per il relax e il divertimento di tutti.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="property-block right-block">
-        <h2 class="property-title" style="text-align: right;">La Conte House</h2>
-        <div class="property-content reverse">
-            <div class="property-gallery">
-                <div class="image-gallery" id="gallery-conte">
-                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="La Conte House" class="property-image">
-                    <button class="carousel-btn prev-btn"><</button>
-                    <button class="carousel-btn next-btn">></button>
+                    <div class="service-item"><i class="fa-solid fa-shirt"></i><span>Servizio Biancheria</span></div>
+                    <div class="service-item"><i class="fa-solid fa-car-side"></i><span>Noleggio Auto</span></div>
+                    <div class="service-item"><i class="fa-solid fa-bicycle"></i><span>Noleggio Bici</span></div>
+                    <div class="service-item"><i class="fa-solid fa-van-shuttle"></i><span>Navetta Aeroportuale</span></div>
                 </div>
             </div>
-            <div class="property-text">
-                <p class="property-description">Situata all'interno della stessa proprietà, ma con un ingresso separato che ne garantisce la massima privacy, la Conte House è un'accogliente e riservata dependance.</p>
-                <p class="property-description">Perfetta per coppie o piccole famiglie, questa suite indipendente è composta da una camera da letto con TV, un bagno privato e un soggiorno con una moderna cucina a vista, offrendo un rifugio intimo e confortevole.</p>
-            </div>
-        </div>
-    </div>
+        </section>
 
-</div>
-
+        <section id="chi-siamo" class="content-section">
+            <div class="container">
                 <div class="location-info">
                     <p>Per rendere il vostro soggiorno ancora più sereno e personalizzato, siamo felici di offrire una serie di <strong>servizi esclusivi su richiesta</strong>.</p>
                 </div>
-
                 <div class="map-section">
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.5539512345!2d15.8495!3d38.6655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131576b8463aa24d%3A0x4214b3b0ef09d5ff!2sVilla%20del%20Conte!5e0!3m2!1sit!2sit!4v1710380000000!5m2!1sit!2sit" 
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.5539512345!2d15.8495!3d38.6655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131576b8463aa24d%3A0x4214b3b0ef09d5ff!2sVilla%20del%20Conte!5e0!3m2!1sit!2sit!4v1710380000000!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="villa-details">
                         <p>La Villa del Conte si trova a Santa Domenica di Ricadi, nella splendida Costa degli Dei, nota per le sue spiagge mozzafiato e il mare cristallino. A pochi minuti da Capo Vaticano e Tropea, la zona offre ristoranti, bar, negozi e tutti i comfort per una vacanza rilassante.</p>
@@ -112,26 +130,12 @@
             </div>
         </section>
 
-        <div class="container">
-            <div class="services-bar">
-                <div class="service-item">
-                    <i class="fa-solid fa-shirt"></i>
-                    <span>Servizio Biancheria</span>
-                </div>
-                <div class="service-item">
-                    <i class="fa-solid fa-car-side"></i>
-                    <span>Noleggio Auto</span>
-                </div>
-                <div class="service-item">
-                    <i class="fa-solid fa-bicycle"></i>
-                    <span>Noleggio Bici</span>
-                </div>
-                <div class="service-item">
-                    <i class="fa-solid fa-van-shuttle"></i>
-                    <span>Navetta Aeroportuale</span>
-                </div>
+        <section id="faq" class="content-section">
+            <div class="container" style="padding: 60px 20px; text-align: center;">
+                <h2 class="property-title">Domande Frequenti</h2>
+                <p class="property-description">Le domande più comuni dei nostri ospiti appariranno qui.</p>
             </div>
-        </div>
+        </section>
 
         <section class="contact-section">
             <div class="container">
@@ -185,9 +189,22 @@
     }
     initializeCarousel('gallery-villa', villaImages);
     initializeCarousel('gallery-conte', conteImages);
+
+    // Navigazione a Schede
+    const navBtns = document.querySelectorAll('.nav-btn');
+    const sections = document.querySelectorAll('.content-section');
+
+    navBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            navBtns.forEach(b => b.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(btn.getAttribute('data-target')).classList.add('active');
+        });
+    });
   });
 
-    document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     body.classList.add('loading');
 
@@ -196,9 +213,9 @@
         setTimeout(() => {
             loader.classList.add('loader-hidden');
             body.classList.remove('loading');
-        }, 3000); // 3 secondi totali per godersi l'animazione
+        }, 3000); 
     });
-});
+  });
 </script>
 </body>
 </html>
