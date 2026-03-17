@@ -310,4 +310,18 @@ body.loading {
     to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
+main > section, main > div.container {
+  opacity: 0;
+  animation: microIntro 0.6s ease forwards;
+}
+
+main > .properties-section { animation-delay: 2.8s; }
+main > div.container { animation-delay: 3.0s; }
+main > .contact-section { animation-delay: 3.2s; }
+
+@keyframes microIntro {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .loader-hidden { opacity: 0; pointer-events: none; }
