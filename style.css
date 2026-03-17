@@ -65,15 +65,29 @@ header {
   padding: 40px 0;
 }
 
-.property-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
+.property-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 60px;
 }
 
-.property {
-  text-align: center;
+.property-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.property-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.property-gallery, .property-text {
+  flex: 1;
+}
+
+.property-text {
+  text-align: left;
 }
 
 .property-image {
@@ -266,6 +280,9 @@ header {
   }
   .logo-image {
     max-width: 280px; 
+  }
+  .property-row, .property-row.reverse {
+    flex-direction: column;
   }
 }
 
