@@ -15,6 +15,10 @@
            mentre nel file html invece di scrivere i testi ti riferisci ad un determinato testo usando le data-key.
       - url + sotto-directories : approccio migliore per la SEO.
       - librerie o API : librerie come i18Next oppure widget come Google Translate API o Weglot 
+   • La Soluzione Migliore:
+      (1) aggiungere l'attributo data-i18n ad ogni testo o riga nell'html; (2) creare un oggetto js con tutte le traduzioni;
+      (3) implementare una funzione SetLanguage nel js; (4) inserire nell'html il menù di selezione della lingua.
+      - italiano, inglese, spagnolo, russo, tedesco, cinese ---> tramite IA, cioè niente google translate.
 
 -###- PROMPT ESAGERATO
 "Ora come ora dopo l'animazione introduttiva ci sono gli "elementi" che appaiono tutti insieme, 
@@ -23,24 +27,9 @@
 Inoltre, vorrei che scrollando apparissero le cose e non che scrolli e vedi che stanno già tutte lì non so se mi spiego; 
    questo però è una "apparizione dinamica" diversa da quella iniziale che ho poc'anzi detto perchè questa è collegata allo scroll sul sito,
    mentre la prima che intendevo sarebbe correlata all'accesso al sito ed al momento immediatamente successivo alla conclusione dell'animazione. 
-Poi, mi servirebbe creare una sezione "chi siamo" dove racconto un pò della struttura (della villa e della conte house) e poi anche una sezione "FAQ" 
-   (con domande standard e risposte scritte a comparsa, non so se mi spiego ma è una cosa abbastanza standard) e poi anche una sezione "blog". 
 La sezione blog però da quanto ho capito complica la situazione perchè ora come ora non lo so, 
    cioè dovrebbe esserci nella sezione blog una pagina iniziale con tutti quadratini dei post/articoli e tu clicchi sul singolo articolo 
    e te lo fa leggere ma significa che periodicamente devo aggiungere un articolo quindi non so come funziona il tutto. 
 Il tutto si complica anche considerando che per ora il sito non offre nulla per chi non parla italiano ma molti siti offrono la possibilità di tradurre 
    in una determinata lingua semplicemente selezionandola tra quelle in una lista a comparsa che compare cliccando su un apposito tasto che 
    di solito appare come semplice "italiano" se attualmente la lingua selezionata è l'italiano, non so se mi spiego ma è una cosa abbastanza standard. 
-Comunque, a parte la questione della traduzione, siccome ho bisogno di aggiungere delle sezioni avrei allora bisogno di aggiungere uno strumento per 
-   la navigazione ed in merito mi vengono in mente due strade, non per forza alternative ma anche implementabili entrambe: 
-   alcuni siti hanno dei "menù" che non sono proprio menù bensì al di sotto dell'header (che nel mio caso è costituito dal logo con l'immagine di sfondo sfumata per bene) 
-   appaiono i titoli delle varie sezioni in orizzontale e tutti visibili già senza cliccare niente, quindi clicchi ad esempio sulla scritta "chi siamo" che 
-   magari appare subito dopo "le strutture" (che sarebbe la sezione aperta by default e che contiene i caroselli che ora già appaiono nella homepage ma che come 
-   a breve ti dico vanno un pò modificati sul come sono disposti) e in maniera molto smooth si apre la sezione "chi siamo" ma senza che scompaia l'header 
-   (si, sempre quello con logo ed immagine di sfondo sfumata per bene) e senza che scompaia neanche questa specie di menù; un'altra soluzione sarebbe 
-   mettere le classiche tre lineette tipo in alto a destra al cui click appaiono le varie sezioni e cliccando su una in particolare ti si apre proprio quella sezione. 
-Infine, devo modificare il layout: attualmente le due strutture (la villa e la conte house) appaiono una accanto all'altra così come i testi che le descrivono, 
-   invece sarebbe meglio un layout tale per cui la villa appare per prima e più a sinistra di quanto sta adesso siccome ora sembra leggermente 
-   spostata verso il centro non so se mi spiego ed insomma il carosello deve apparire a sinistra ed il testo relativo alla villa deve stare alla sua destra, 
-   cioè praticamente la "fascia" ora occupata dai due caroselli deve essere "occupata" solo dal carosello e dai servizi e dal testo relativo alla villa; 
-   dopodichè deve apparire la conte house ma in maniera specchiata cioè con il carosello a destra ed il testo alla sua sinistra."
