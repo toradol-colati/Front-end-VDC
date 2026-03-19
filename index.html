@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa del Conte</title>
+    <title>Villa del Conte | Affitti Turistici a Santa Domenica di Ricadi</title>
+    <meta name="description" content="Prenota La Villa o La Conte House a Santa Domenica di Ricadi, Costa degli Dei. Ampi spazi, giardino privato, Wi-Fi gratuito e parcheggio a due passi da Tropea.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toradol-colati.github.io/Front-end-VDC/">
+    <meta property="og:title" content="Villa del Conte | Santa Domenica di Ricadi">
+    <meta property="og:description" content="Appartamenti e ville per vacanze nella splendida Costa degli Dei. Scopri i nostri servizi esclusivi.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+
+    <link rel="icon" type="image/png" href="images/ui/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Villa del Conte",
+      "description": "Struttura ricettiva composta da La Villa e La Conte House, situata a Santa Domenica di Ricadi.",
+      "url": "https://toradol-colati.github.io/Front-end-VDC/",
+      "telephone": "+393332948156",
+      "email": "villadelconte.contactus@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Santa Domenica",
+        "addressLocality": "Ricadi",
+        "postalCode": "89866",
+        "addressRegion": "VV",
+        "addressCountry": "IT"
+      },
+      "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+    </script>
 </head>
 <body>
     <div id="loader-wrapper">
@@ -48,11 +77,11 @@
          </div>
       </div>
     </header>
-<nav class="main-nav">
-        <div class="container">
-            <button class="nav-btn active" data-target="strutture">Le Strutture</button>
-            <button class="nav-btn" data-target="chi-siamo">Chi Siamo</button>
-            <button class="nav-btn" data-target="faq">FAQ</button>
+<nav class="main-nav" aria-label="Navigazione principale">
+        <div class="container" role="tablist">
+            <button class="nav-btn active" role="tab" aria-selected="true" aria-controls="strutture" id="tab-strutture" data-target="strutture">Le Strutture</button>
+            <button class="nav-btn" role="tab" aria-selected="false" aria-controls="chi-siamo" id="tab-chi-siamo" data-target="chi-siamo">Chi Siamo</button>
+            <button class="nav-btn" role="tab" aria-selected="false" aria-controls="faq" id="tab-faq" data-target="faq">FAQ</button>
         </div>
     </nav>
 
@@ -261,9 +290,16 @@
 
     navBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            navBtns.forEach(b => b.classList.remove('active'));
-            sections.forEach(s => s.classList.remove('active'));
+            navBtns.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
+            });
+            sections.forEach(s => {
+                s.classList.remove('active');
+            });
+
             btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
             document.getElementById(btn.getAttribute('data-target')).classList.add('active');
         });
     });
