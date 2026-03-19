@@ -524,3 +524,18 @@ main > .contact-section { animation-delay: 3.5s; }
     margin-bottom: 20px;
   }
 }
+
+@media (max-width: 768px) {
+    .services-col {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
+        width: 100%;
+    }
+    .service-item {
+        margin-bottom: 0;
+    }
+}
