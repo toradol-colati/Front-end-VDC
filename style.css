@@ -236,6 +236,11 @@ header {
 .prev-btn { left: 10px; }
 .next-btn { right: 10px; }
 
+.carousel-btn i {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
 #sticky-logo {
   position: fixed;
   top: 15px;
